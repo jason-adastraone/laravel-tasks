@@ -5,7 +5,7 @@
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    New Task
+                    New Task - hooray
                 </div>
 
                 <div class="panel-body">
@@ -21,7 +21,8 @@
                             <label for="task-name" class="col-sm-3 control-label">Task</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
+                                <input type="text" name="name" id="task-name" class="form-control"
+                                    value="{{ old('task') }}">
                             </div>
                         </div>
 
@@ -53,11 +54,13 @@
                             <tbody>
                                 @foreach ($tasks as $task)
                                     <tr>
-                                        <td class="table-text"><div>{{ $task->name }}</div></td>
+                                        <td class="table-text">
+                                            <div>{{ $task->name }}</div>
+                                        </td>
 
                                         <!-- Task Delete Button -->
                                         <td>
-                                            <form action="{{'/task/' . $task->id }}" method="POST">
+                                            <form action="{{ '/task/' . $task->id }}" method="POST">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
 
