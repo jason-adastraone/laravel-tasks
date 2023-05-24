@@ -42,7 +42,7 @@
             @if (count($tasks) > 0)
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Current Tasks - hurray
+                        Current Tasks - hurray hooray
                     </div>
 
                     <div class="panel-body">
